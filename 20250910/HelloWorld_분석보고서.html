@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloWorld.java 코드 분석 보고서</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #5a6c7d;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        pre {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .output-box {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-line;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 10px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HelloWorld.java 코드 분석 보고서</h1>
+
+        <h2>1. 파일 개요</h2>
+        <ul>
+            <li><strong>파일명</strong>: HelloWorld.java</li>
+            <li><strong>작성일</strong>: 2025년 9월 10일</li>
+            <li><strong>분석일</strong>: 2025년 9월 11일</li>
+            <li><strong>특징</strong>: 디컴파일된 Java 코드 (FernFlower 디컴파일러 사용)</li>
+        </ul>
+
+        <h2>2. 코드 구조 분석</h2>
+
+        <h3>2.1 클래스 정의</h3>
+        <pre><code>public class HelloWorld {
+   public HelloWorld() {
+   }</code></pre>
+        <ul>
+            <li><strong>클래스명</strong>: HelloWorld</li>
+            <li><strong>접근 제어자</strong>: public</li>
+            <li><strong>생성자</strong>: 기본 생성자가 명시적으로 정의되어 있음 (내용은 비어있음)</li>
+        </ul>
+
+        <h3>2.2 메인 메소드</h3>
+        <pre><code>public static void main(String[] var0)</code></pre>
+        <ul>
+            <li>Java 애플리케이션의 진입점</li>
+            <li>매개변수 <code>var0</code>는 디컴파일 과정에서 생성된 변수명</li>
+            <li>원래는 <code>String[] args</code>였을 것으로 추정</li>
+        </ul>
+
+        <h2>3. 프로그램 기능 분석</h2>
+
+        <h3>3.1 환영 메시지 출력</h3>
+        <pre><code>System.out.println("안녕하세요, Java의 세계에 오신 것을 환영합니다!");
+System.out.println("Hello, World!");</code></pre>
+        <ul>
+            <li>한글과 영어로 환영 인사 출력</li>
+            <li><code>System.out.println()</code> 메소드 사용</li>
+        </ul>
+
+        <h3>3.2 변수 선언 및 사용</h3>
+        <pre><code>String var1 = "Java 학습자";
+byte var2 = 20;</code></pre>
+        <ul>
+            <li><strong>var1 (String)</strong>: 사용자 이름 저장</li>
+            <li><strong>var2 (byte)</strong>: 나이 정보 저장 (20살)</li>
+        </ul>
+
+        <h3>3.3 자기소개 섹션</h3>
+        <pre><code>System.out.println("\n=== 자기소개 ===");
+System.out.println("이름: " + var1);
+System.out.println("나이: " + var2 + "살");</code></pre>
+        <ul>
+            <li>구분선을 사용한 섹션 구성</li>
+            <li>문자열 연결 연산자 <code>+</code> 사용</li>
+            <li>변수값과 문자열 결합하여 출력</li>
+        </ul>
+
+        <h3>3.4 계산 기능</h3>
+        <pre><code>byte var3 = 10;
+byte var4 = 5;
+int var5 = var3 + var4;</code></pre>
+        <div class="highlight">
+            <strong>중요</strong>: byte 연산 결과는 자동으로 int로 형변환됩니다.
+        </div>
+
+        <h2>4. 디컴파일 특성 분석</h2>
+
+        <h3>4.1 변수명 변화</h3>
+        <table>
+            <tr>
+                <th>디컴파일된 변수명</th>
+                <th>원래 추정 변수명</th>
+            </tr>
+            <tr><td>var0</td><td>args</td></tr>
+            <tr><td>var1</td><td>name</td></tr>
+            <tr><td>var2</td><td>age</td></tr>
+            <tr><td>var3</td><td>num1</td></tr>
+            <tr><td>var4</td><td>num2</td></tr>
+            <tr><td>var5</td><td>sum</td></tr>
+        </table>
+
+        <h2>5. 학습 요소</h2>
+        <p>이 코드는 Java 초보자를 위한 교육용 예제로, 다음과 같은 개념을 다룹니다:</p>
+
+        <h3>5.1 기본 출력</h3>
+        <ul>
+            <li><code>System.out.println()</code> 메소드 사용법</li>
+            <li>줄바꿈 문자 <code>\n</code> 활용</li>
+        </ul>
+
+        <h3>5.2 데이터 타입</h3>
+        <ul>
+            <li><strong>String</strong>: 문자열 데이터</li>
+            <li><strong>byte</strong>: 8비트 정수 (-128 ~ 127)</li>
+            <li><strong>int</strong>: 32비트 정수</li>
+        </ul>
+
+        <h3>5.3 연산자</h3>
+        <ul>
+            <li>문자열 연결 연산자 <code>+</code></li>
+            <li>산술 연산자 <code>+</code> (덧셈)</li>
+        </ul>
+
+        <h3>5.4 자동 형변환</h3>
+        <ul>
+            <li>byte + byte → int (자동 승격)</li>
+        </ul>
+
+        <h2>6. 실행 결과</h2>
+        <p>프로그램 실행 시 예상되는 출력:</p>
+        <div class="output-box">안녕하세요, Java의 세계에 오신 것을 환영합니다!
+Hello, World!
+
+=== 자기소개 ===
+이름: Java 학습자
+나이: 20살
+
+=== 간단한 계산 ===
+10 + 5 = 15</div>
+
+        <h2>7. 개선 사항 제안</h2>
+
+        <h3>7.1 코드 구조</h3>
+        <ul>
+            <li>의미있는 변수명 사용</li>
+            <li>주석 추가로 코드 가독성 향상</li>
+            <li>메소드 분리를 통한 기능별 모듈화</li>
+        </ul>
+
+        <h3>7.2 기능 확장</h3>
+        <ul>
+            <li>사용자 입력 기능 추가 (Scanner 클래스)</li>
+            <li>다양한 연산 기능 추가</li>
+            <li>예외 처리 구현</li>
+        </ul>
+
+        <h2>8. 결론</h2>
+        <p>이 HelloWorld.java 파일은 Java 프로그래밍 학습의 기초가 되는 예제 코드입니다. 
+        비록 디컴파일된 코드이지만, Java의 기본 문법과 개념을 이해하는 데 유용한 자료로 활용할 수 있습니다.</p>
+
+        <div class="footer">
+            <hr>
+            <strong>문서 작성자</strong>: Claude AI Assistant<br>
+            <strong>작성일</strong>: 2025년 9월 11일<br>
+            <strong>문서 버전</strong>: 1.0
+        </div>
+    </div>
+</body>
+</html>
