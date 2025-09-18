@@ -14,13 +14,21 @@ public class Variables {
         System.out.println("AB" + '\n' + 'C');//줄바꿈
         System.out.println("AB" + '\r' + 'C');//
 
-        int num1 = 50;
-        long num2 = 3147483647L;
-        System.out.println(num1 + num2);
+        int num3 = 50;
+        long num4 = 3147483647L;
+        System.out.println(num3 + num4);
 
         double pi = 3.1415;
         int wholeNumber = (int)pi;
         System.out.println(wholeNumber);
+
+        int num1 = 7;
+        int num2 = 3;
+        
+        System.out.println("num1 / num2 = " + (num1 / num2));
+        System.out.println("num1 / num2 = " + ((float)num1 / (float)num2));
+        System.out.println("num1 / num2 = " + (float)(num1 / num2));
+
 
     }
 
